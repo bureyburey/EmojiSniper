@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Emoji Sniper</title>
+        <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+        <script src="https://rawgit.com/bureyburey/Scoreboard-Module/master/scoreboard.js"></script>
+        <!-- NOT REQUIRED, JUST A COOL FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+    </head>
+    <body bgcolor="grey">
+        <table>
+        <tr>
+        <td>
+        <canvas id="myCanvas"></canvas>
+        </td>
+        <td>
+        <table id="yOffsetContainer">
+        <tr><td>
+        <label id="yOffsetLabel">0</label>
+        </td></tr>
+        <tr><td>
+        <input id="yOffset" type="range" orient="vertical" value="8" min="-9" max="9" />
+        </td></tr>
+        </table>
+        </td>
+        </tr>
+        </table>
+        <table class="infoStat" id="tableStats">
+            <tr><td>
+                <label class="infoStat">Score: <label id="scoreValue">0</label></label>
+            </td>
+            <td>
+                <label>x2<br /><input id="equipScope" type="checkbox"></label>
+            </td>
+            <td>
+                <button id='showScoreboard'>Scoreboard</button>
+            </td>
+            <td>
+                <button id="startGame">Start</button>
+            </td>
+            <td>
+            Size:
+            <select id="targetSizeSelect">
+            <option value="35">Default</option>
+            <option value="100">100</option>
+            <option value="50">50</option>
+            <option value="20">20</option>
+            <option value="10">10</option>
+            </select>
+            </td>
+            </tr>
+            <tr><td>
+                <label class="infoStat">Hit Ratio: <label id="hrValue">0/0</label></label>
+            </td></tr>
+            <tr><td>
+                <label class="infoStat">Hit %: <label id="hrPercent">0%</label></label>
+            </td></tr>
+        </table>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyAizFONcTmw5MS_eKvafsj5TJEiAVkQQFE",
+            authDomain: "emojisniper-50994.firebaseapp.com",
+            databaseURL: "https://emojisniper-50994.firebaseio.com",
+            storageBucket: "emojisniper-50994.appspot.com",
+            messagingSenderId: "547915925856"
+          };
+          firebase.initializeApp(config);
+        </script>
+    </body>
+</html>
