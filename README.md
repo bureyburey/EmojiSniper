@@ -1,2 +1,2 @@
-# EmojiSniper<br /><br />
+# EmojiSniper<br />
 <a href="https://code.sololearn.com/WyTiHkX11qW0/#html">Emoji Sniper Code on SoloLearn</a>
